@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>what is your name?</p>
+        <input type="text">  
+    </div>
+
+    <div>
+        <button>Click to submit</button>
+    </div>
+
+    <div class="list">
+        
+    </div>
+
+    <script>
+        const button = document.querySelector('button');
+        const input = document.querySelector('input');
+        const list = document.querySelector('.list');
+
+        button.addEventListener('click', () => {
+            const li = document.createElement('li');
+            li.textContent = input.value;
+            if (input.value === '') {
+                alert('Please enter your name');
+                return;
+            } else {
+                list.appendChild(li);
+            }
+            
+        });
+    </script>
+</body>
+</html>
+
